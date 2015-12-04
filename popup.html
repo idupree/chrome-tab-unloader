@@ -4,25 +4,27 @@
     <meta charset="utf-8" />
     <title>Unload Some Tabs Popup</title>
     <style>
-      body {
-        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
-        font-size: 100%;
-      }
-      #status {
-        /* avoid an excessively wide status text */
-        white-space: pre;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        max-width: 400px;
-        min-width: 300px;
-        height: 400px;
-        word-break: break-word;
-      }
+html {
+  font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+  font-size: 100%;
+  min-width: 200px;
+  text-align: center;
+  background-color: #dcf;
+  color: #203;
+}
+button {
+  margin: 5px;
+  padding: 5px;
+  /* (default background pattern instead of background-color) */
+  color: #102;
+}
     </style>
 
     <script src="popup.js"></script>
   </head>
   <body>
     <div id="status"></div>
+    <button id="unloadthis">Unload this tab</button>
+    <button id="unloadnonpinned">Unload all non-pinned http(s) tabs</button>
   </body>
 </html>

@@ -47,10 +47,9 @@ function percentDeEscapeChars(string, chars) {
   return string;
 }
 
-function swizzleTab(tab) {
+function swizzleTab(tab, force) {
   var okToSwizzle = (
-    !!tab.url && /^https?:\/\//.test(tab.url) &&
-    !tab.pinned &&
+    (force || (tab.url && /^https?:\/\//.test(tab.url) && !tab.pinned)) &&
     tab.id != null
     );
   if(okToSwizzle) {
@@ -149,9 +148,25 @@ function swizzleTab(tab) {
 
 document.addEventListener('DOMContentLoaded', function() {
   var status = document.getElementById('status');
-  chrome.tabs.query({}, function(tabs) {
-    var tab = tabs[9];
-    swizzleTab(tab);
+  var unloadthis = document.getElementById('unloadthis');
+  var unloadnonpinned = document.getElementById('unloadnonpinned');
+  //chrome.tabs.query({}, function(tabs) {
+  //  var tab = tabs[9];
+  //  swizzleTab(tab);
+  //});
+  unloadthis.addEventListener('click', function() {
+    chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
+      tabs.forEach(function(tab) {
+        swizzleTab(tab, true);
+      });
+    });
+  });
+  unloadnonpinned.addEventListener('click', function() {
+    chrome.tabs.query({}, function(tabs) {
+      tabs.forEach(function(tab) {
+        swizzleTab(tab);
+      });
+    });
   });
 });
 
