@@ -99,7 +99,7 @@ function swizzleTab(tab, force) {
             'b = true;' +
             'e.preventDefault();' +
             'location.replace(location.href + "#nomoreback");' +
-            'history.back();' +
+            'if(history.length >= 2) { history.back(); } else { location.replace(a.href); }' +
           '}' +
         '});' +
       '</script>'
