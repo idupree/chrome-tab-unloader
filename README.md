@@ -2,7 +2,7 @@
 Chrome Tab Unloader
 ===
 
-This addon gives you a simple button to unload the current
+This browser extension gives you a simple button to unload the current
 tab, or all tabs. You might do this in order to save on system 
 resources (RAM, CPU), or to make the tab quiet.  Reload the tab
 just by clicking in its content area.
