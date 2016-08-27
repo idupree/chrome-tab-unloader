@@ -75,7 +75,7 @@ function swizzleTab(tab, force) {
       '<style>' +
       //'html{background-color:#b9f}' +
       'html{background-color:#dcf}' +
-      'html,body,a{width:100%;height:100%;display:block;text-align:center}' +
+      'html,body,a{width:100%;height:100%;margin:0;display:block;text-align:center}' +
       'a{display:flex;align-items:center;justify-content:center;text-decoration:none;color:#808}' +
       'h1{font-size:4rem}' +
       'p{font-size:1rem;margin:25px}' +
@@ -86,7 +86,10 @@ function swizzleTab(tab, force) {
       // location.replace with a hash only change doesn't reload
       '<a rel="noreferrer" href="' + htmlEscape(tab.url) + '"><div>' +
       '<h1>click to reload</h1>' +
+      //'<p>[' + htmlEscape(title) + ']</p>' +
       '<p>' + htmlEscape(tab.url) + '</p>' +
+      // TODO is the image likely not in cache? maybe best not to load a remote thing?
+      // or auto load when the user selects this tab??? dunno
       '<img src="' + htmlEscape(tab.favIconUrl) + '" width="128" height="128" />' +
       '<p>(if anything goes wrong,<br />"forward" may fix it)</p>' +
       '</div></a>' +
