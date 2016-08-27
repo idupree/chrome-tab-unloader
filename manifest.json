@@ -3,7 +3,7 @@
 
   "name": "Chrome Tab Unloader",
   "short_name": "Tab Unloader",
-  "description": "This extension can save your system resources by replacing your tabs with placeholders",
+  "description": "This extension gives you a button to save your system resources by replacing open tabs with placeholders.",
   "version": "1.0",
 
   "browser_action": {
