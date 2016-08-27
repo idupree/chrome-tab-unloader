@@ -34,3 +34,9 @@ server favicon, for two reasons.  It makes the favicon work without
 any network access, and it allows me to modify the favicon to make
 it easier to see that a tab is unloaded (e.g. making its color grayer).
 
+Attribution
+===
+
+Icon is from [wikimedia](https://commons.wikimedia.org/wiki/File:Clothes_hanger_icon_3.svg)
+under CC-BY-SA 4.0 International.
+
