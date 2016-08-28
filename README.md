@@ -48,3 +48,11 @@ Attribution
 Icon is from [wikimedia](https://commons.wikimedia.org/wiki/File:Clothes_hanger_icon_3.svg)
 under CC-BY-SA 4.0 International.
 
+Building
+===
+
+To get a .zip for the chrome web store,
+
+```
+git archive --format zip HEAD -o chrome-tab-unloader.zip
+```
