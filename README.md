@@ -28,7 +28,7 @@ anymore, because it might end up in bookmarks or copied somewhere.
 I made the page let you get to its target without Javascript, in
 case Javascript got turned off for that page somehow.
 
-I made the page work even if you copy the URL to a new tab
+I made the page work even if you copy the URL to a new tab.
 Though unfortunately this has tension with preserving your browsing
 history when you don't copy the URL.  In one choice, your
 tab "back" history gets longer every time you unload then load
