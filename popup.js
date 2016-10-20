@@ -86,7 +86,9 @@ function swizzleTab(tab, force) {
       '<p>' + htmlEscape(tab.url) + '</p>' +
       // TODO is the image likely not in cache? maybe best not to load a remote thing?
       // or auto load when the user selects this tab? dunno.
-      '<img src="' + htmlEscape(tab.favIconUrl) + '" width="128" height="128" />' +
+      (tab.favIconUrl ? (
+      '<img src="' + htmlEscape(tab.favIconUrl) + '" width="128" height="128" />'
+      ) : '') +
       '<p>(if anything goes wrong,<br />"forward" may fix it)</p>' +
       '</div></a>' +
       // Put the script here instead of in chrome.tabs.executeScript
